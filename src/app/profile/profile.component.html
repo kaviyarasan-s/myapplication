@@ -1,0 +1,38 @@
+<h3>CREATE PROFILE</h3>
+<form>
+    <div [formGroup]='profileForm'>
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <label for='Display Name'>Display Name</label>
+            </div>
+            <input type="text" id="displayName" formControlName='displayName' class="form-control inputTextBox" required>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <label for='DOB'>DOB</label>
+            </div>
+            <input type="text" id="dob" formControlName='dob' bsDatepicker class="form-control inputTextBox">
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <label for='Address'>Address</label>
+            </div>
+            <input type="textarea" id="dob" formControlName='address' class="form-control inputTextBox">
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <label for='Username'>Username</label>
+            </div>
+            <input type="text" id="username" formControlName='userName' class="form-control inputTextBox" required>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <label for='Password'>Password</label>
+            </div>
+            <input type="password" id="password" formControlName='password' class="form-control inputTextBox" required>
+        </div>
+        <div class="col-sm-12">
+            <button type="submit" (click)='createProfile()' class="btn btn-primary submitBtn" [disabled] = "!profileForm.valid">Create</button>
+        </div>
+    </div>
+</form>

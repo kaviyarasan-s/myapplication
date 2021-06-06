@@ -1,0 +1,14 @@
+<div *ngIf='addedDiaryContent.length > 0'>
+    <table style="width:50%">
+        <tr>
+            <th>Date</th>
+            <th>Content</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor='let i of addedDiaryContent'>
+            <td>{{i.date}}</td>
+            <td>{{i.diaryContent}}</td>
+            <td><button class='btn btn-submit'>Edit</button></td>
+        </tr>
+    </table>
+</div>

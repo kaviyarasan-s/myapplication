@@ -1,0 +1,33 @@
+<div class="col-sm-12">
+    <h3><b><u>PRODUCT DETAILS</u></b></h3>
+    <div class="col-sm-12">
+        <label for="productName">Product Name</label>
+        <input type="text" #productName name="productName" placeholder="Enter product name">
+    </div>
+    <div class="col-sm-12">
+        <label for="productName">Product Name</label>
+        <input type="number" [(ngModel)]="price" placeholder="Enter price">
+    </div>
+    <div class="col-sm-12">
+        <button [style.background-color]="color">add product</button>
+    </div>
+</div>
+
+<div class="col-sm-12">
+    User Inputs
+    <div class="col-sm-12">
+        Product Name : {{productName.value}}
+    </div>
+    <div class="col-sm-12">
+        Price : {{price | powerPipe : 2}}
+    </div>
+</div>
+
+
+<div class="col-sm-12">
+    Sample Result
+    <div class="col-sm-12">
+        DisplayName : {{ result  | json }}
+    </div>
+</div>
+

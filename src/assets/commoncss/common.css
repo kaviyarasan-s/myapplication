@@ -1,0 +1,17 @@
+.inputTextBox{
+    width:25%;
+}
+
+.submitBtn{
+    margin-top:5px;
+    width:15%;
+}
+
+.cs-center{
+    align-items: center;
+}
+
+.inputTextAreaBox{
+    width:25%;
+    height: 300px;
+}

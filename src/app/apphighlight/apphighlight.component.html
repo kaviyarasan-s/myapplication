@@ -1,0 +1,26 @@
+<h4>Welcome {{title | uppercase}}!!!</h4>
+<div><h2>Author : {{person.authorName}}</h2></div>
+
+
+<div>
+Name : <input type="text" id='personName'><br>
+<button (click)='addPerson()' style="margin-top:5px">Add Person</button>
+</div>
+
+<button (click)='showpersonList()' style="margin-top:5px;color:blue">Show Person List</button>
+<div class="hide personlist" style="margin-top:5px">
+    <b>person list</b>
+    <div *ngIf="personArray.length > 0">
+        <div *ngFor='let x of personArray'>
+            {{x}}
+        </div>
+    </div>
+    
+    <div *ngIf="personArray.length == 0">
+        <b>Person List is Empty!!!</b>
+    </div>
+</div>
+<p [appHighlights] ="color">Highlight text!!!</p>
+
+<button (click)="printResultData()">Show result</button>
+ 

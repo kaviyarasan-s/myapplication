@@ -1,0 +1,12 @@
+table, th, td {
+    border: 1px solid black;
+  }
+
+ td {
+   text-align: center
+ } 
+
+ .diary-container{
+  margin-left: 40%;
+  width: 100%;
+ }

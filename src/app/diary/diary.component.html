@@ -1,0 +1,73 @@
+<div *ngIf="createDiary && !showDiaryList">
+    <form class="diary-container">
+        <h3>ADD DIARY</h3>
+        <div class='form-group'>
+            <div>
+                <label for='date'>Select Date</label>
+                <input type='text' class="form-control inputTextBox" id='date' bsDatepicker>
+            </div>
+            <div>
+                <label for='date'>Description</label>:
+                <input type='textarea' class='form-control inputTextAreaBox' id='diaryContent'>
+            </div>
+
+            <div>
+                <button class="btn btn-primary submitBtn" (click)='addDiaryContent()'> Add Content</button>
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-primary submitBtn" (click)='listDiaryContent()'> List All Diary Content </button>
+        </div>
+    </form>
+</div>
+<div *ngIf='isSearchPage'>
+    <div>
+        <label for='diaryDate'>Select Date</label>
+        <div>
+            <label for='from'>From</label>
+            <input type='text' class="form-control inputTextBox" id='date' bsDatepicker>
+        </div>
+        <div>
+            <label for='to'>To</label>
+            <input type='text' class="form-control inputTextBox" id='date' bsDatepicker>
+        </div>
+    </div>
+    <div>
+        <button (click)='searchDiaryContent()'>Search</button>
+    </div>
+    <div *ngIf='searchedResult'>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Content</th>
+                <th></th>
+            </tr>
+            <div *ngFor=''>
+                <tr>
+                    <td>Date</td>
+                    <td>Content</td>
+                    <td><button class='btn btn-submit'>Edit</button></td>
+                </tr>
+            </div>
+        </table>
+    </div>
+</div>
+
+<!-- <div *ngIf='addedDiaryContent.length > 0'>
+        <table style="width:50%">
+            <tr>
+                <th>Date</th>
+                <th>Content</th>
+                <th>Action</th>
+            </tr>
+                <tr *ngFor='let i of addedDiaryContent'>
+                    <td>{{i.date}}</td>
+                    <td>{{i.diaryContent}}</td>
+                    <td><button class='btn btn-submit'>Edit</button></td>
+                </tr>
+        </table>
+    </div> -->
+<div *ngIf="showDiaryList && !createDiary">
+    <app-view-diary [addedDiaryContent]="addedDiaryContent"></app-view-diary>
+</div>
